@@ -10,6 +10,7 @@ export default class Transaction {
     constructor(private transaction: TransactionType) {
         transaction.timestamp = String(Date.now());
         transaction.transactionHash = this.calculateTransactionHash();
+        transaction.signature = "";
     }
 
     calculateTransactionHash = () => {
